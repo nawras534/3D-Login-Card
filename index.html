@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div id="log" class="face front">
+            <div class="box">
+                <div id="btn"></div>
+                    <button type="button" class="toggle" >Login</button>
+                    <button type="button" class="toggle" onclick="register()">Register</button>
+            </div>
+            <form class="formbox">
+                <input type="text" placeholder="Enter Your Name" class="inputfield">
+                <input type="password" placeholder="Enter Your Password" class="inputfield">
+                <input type="button" value="Login" class="buton">
+            </form>
+        </div>
+        <div id = "regist" class="face back">
+            <div class="box">
+            <div id="btn2"></div>
+                <button type="button" class="toggle" onclick="login()">Login</button>
+                <button type="button" class="toggle" >Register</button>
+        </div>
+            <form class="formbox">
+                <input type="text" placeholder="Enter Your Name" class="inputfield">
+                <input type="email" placeholder="Enter Your Email" class="inputfield">
+                <input type="password" placeholder="Enter Your Password" class="inputfield">
+                <input type="button" value="Register" class="buton">
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    var swipe = document.getElementById('btn')
+    var swipe2 = document.getElementById('btn2')
+    var Register = document.getElementById('regist')
+    var Log = document.getElementById('log')
+    function register(){
+        swipe2.style.left ="110px"
+        swipe.style.left = "110px"
+        Register.style.transform = "perspective(500px) rotateY(360deg)"
+        Log.style.transform = "perspective(500px) rotateY(180deg)"
+    }
+    function login(){
+        swipe2.style.left = "0px"
+        swipe.style.left = "0px"
+        Register.style.transform = "perspective(500px) rotateY(180deg)"
+        Log.style.transform = "perspective(500px) rotateY(0deg)"
+    }
+</script>
+</html>

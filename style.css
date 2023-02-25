@@ -1,0 +1,119 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 300px;
+    height:400px;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.box{
+    position: relative;
+    width: 220px;
+    height: 40px;
+    margin: 35px auto;
+    border-radius: 30px;
+    border: 3px solid black;
+}
+.toggle{
+    position: relative;
+    padding: 10px 30px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+#btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 100%;
+    outline: 1px;
+    border-radius: 30px;
+    background: white;
+    transition: .5s;
+}
+#btn2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 100%;
+    outline: 1px;
+    border-radius: 30px;
+    background: white;
+    transition: .5s;
+}
+.formbox .inputfield{
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid white;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1em;   
+    width: 85%;
+}
+.buton{
+    display: block;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    margin: 10px;
+    font-weight: bold;
+    outline: none;
+    border: 2px solid black ;
+    cursor: pointer;
+}
+.face.back input::placeholder{
+    color:black;
+}
+.face.front input::placeholder{
+    color:black;
+}
+.card .face{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 50px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    transform-style: preserve-3d;
+    transition: 2s ease-in-out;
+    backface-visibility: hidden;
+    transform: perspective(500px) rotateY(0deg);
+}
+
+.card .face.back{
+    background-color: rgb(116, 201, 67);
+    transform: perspective(500px) rotateY(180deg);
+    flex-direction: column;
+
+}
+.card .face.front{
+    background-color: yellow;
+    flex-direction: column;
+
+}
+.card .face .formbox,
+.card .face .box{
+    transform: perspective(500px) translateZ(30px);
+}
